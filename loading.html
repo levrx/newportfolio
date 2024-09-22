@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>levrx - portfolio</title>
+  <link rel="stylesheet" href="/css/loading.css">
+  <link rel="stylesheet" href="/css/aurora.css">
+</head>
+<body>
+  <div class="spinner">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    </div>
+
+  <script>
+    // Wait for a brief moment before redirecting
+    setTimeout(() => {
+      const destination = localStorage.getItem('destination');
+      if (destination) {
+        window.location.href = destination;
+      } else {
+        window.location.href = '/loading.html'; // Default fallback in case the destination is not set
+      }
+    }, 2000); // Adjust the timeout duration as needed
+  </script>
+</body>
+</html>
