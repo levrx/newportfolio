@@ -347,7 +347,7 @@ a.errorsubtitle:active {
   position: fixed;
   top: 12px;
   right: 12px;
-  z-index: 1000; /* Ensure it appears above other content */
+  z-index: 0; /* Ensure it appears above other content */
   display: flex; /* Align items horizontally */
   align-items: center; /* Center vertically */
 }
