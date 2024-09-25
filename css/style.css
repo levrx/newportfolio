@@ -10,7 +10,7 @@
   --blur: 1rem;
   --fs: clamp(3rem, 8vw, 7rem);
   --ls: clamp(-1.75px, -0.25vw, -3.5px);
-}
+  }
 
 body {
   min-height: 100vh;
@@ -21,6 +21,7 @@ body {
   font-family: "Inter", "DM Sans", Arial, sans-serif;
   overflow-x: hidden;
   overflow-y: hidden;
+  user-select: none; /* Standard */
 }
 
 body {
@@ -271,6 +272,7 @@ a.errorsubtitle:active {
   gap: 10px; /* Space between buttons */
   justify-content: center;
   margin-top: 20px;
+  z-index: 10;
 }
 
 /* Button and its related styles remain unchanged */
