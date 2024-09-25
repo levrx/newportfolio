@@ -21,9 +21,42 @@
 </div>
 
 <script>
-function goBack() {
-window.history.back();
-}
+  function navigateTo(url) {
+    document.getElementById('eye-closure').classList.add('open');
+    setTimeout(() => {
+      localStorage.setItem('destination', url);
+      window.location.href = '/loading.html';
+    }, 1000); // Adjust timing to match CSS transition duration
+  }
+</script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const statusIcon = document.getElementById('status-icon');
+    const apiUrl = 'https://japi.rest/discord/v1/user/1027224507913621504';
+
+    // Set initial image
+    statusIcon.src = '/images/discord/default.webp';
+
+    fetch(apiUrl)
+      .then(response => response.json())
+      .then(data => {
+        const status = data.presence.status;
+
+        const statusMap = {
+          'online': '/images/discord/online.webp',
+          'idle': '/images/discord/idle.webp',
+          'dnd': '/images/discord/dnd.webp',
+          'offline': '/images/discord/offline.webp'
+        };
+
+        statusIcon.src = statusMap[status] || '/images/discord/default.webp';
+      })
+      .catch(error => {
+        console.error('Error fetching status:', error);
+        statusIcon.src = '/images/discord/default.webp';
+      });
+  });
 </script>
 
 </body>

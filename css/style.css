@@ -23,6 +23,42 @@ body {
   overflow-y: hidden;
 }
 
+body {
+  background-color: #111111;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+.bg {
+  position: fixed;
+  top: -50%;
+  left: -50%;
+  right: -50%;
+  bottom: -50%;
+  width: 200%;
+  height: 200vh;
+  background: transparent url('http://assets.iceable.com/img/noise-transparent.png') repeat 0 0;
+  background-repeat: repeat;
+  animation: bg-animation .2s infinite;
+  opacity: .9;
+  visibility: visible;
+}
+
+@keyframes bg-animation {
+    0% { transform: translate(0,0) }
+    10% { transform: translate(-5%,-5%) }
+    20% { transform: translate(-10%,5%) }
+    30% { transform: translate(5%,-10%) }
+    40% { transform: translate(-5%,15%) }
+    50% { transform: translate(-10%,5%) }
+    60% { transform: translate(15%,0) }
+    70% { transform: translate(0,10%) }
+    80% { transform: translate(-15%,0) }
+    90% { transform: translate(10%,5%) }
+    100% { transform: translate(5%,0) }
+}
+
+
 *,
 *::before,
 *::after {
@@ -40,7 +76,6 @@ body {
   letter-spacing: var(--ls);
   position: relative;
   overflow: hidden;
-  background: var(--bg);
   margin: 0;
 }
 
@@ -246,7 +281,7 @@ a.errorsubtitle:active {
   align-items: center;
   justify-content: center;
   border: none;
-  background-color: transparent;
+  background-color: #181818;
   position: relative;
   border-radius: 7px;
   cursor: pointer;
@@ -255,6 +290,31 @@ a.errorsubtitle:active {
 
 .Btn:hover {
   background-color: #2c2c2c;
+}
+
+.trail {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #33ff8c; /* Transparent green */
+  pointer-events: none; /* Ignore mouse events */
+  transform: scale(1);
+  animation: fadeOut 0.5s ease-out forwards, shrink 0.5s ease-out forwards;
+}
+
+/* Fade out the trail */
+@keyframes fadeOut {
+  to {
+      opacity: 0;
+  }
+}
+
+/* Shrink the trail size */
+@keyframes shrink {
+  to {
+      transform: scale(0);
+  }
 }
 
 .svgContainer {
