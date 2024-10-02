@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>levrx - portfolio</title>
   <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/music.css">
+
 
 </head>
 <body>
@@ -64,7 +66,6 @@
      <!-- oither buttons go here -->
   </div>
 </div>
-
 
 
 <div id="status-container">
@@ -138,5 +139,83 @@
   }
 </script>
 
+<div class="music-player">
+  <audio id="audio"></audio>
+  <div class="controls">
+      <button id="playButton" title="Play" style="display: none;"> <!-- Initially hidden -->
+          <svg fill="white" viewBox="0 0 24 24" width="24" height="24">
+              <path d="M8 5v14l11-7z"></path>
+          </svg>
+      </button>
+      
+      <button id="pauseButton" title="Pause"> <!-- Initially shown -->
+          <svg fill="white" viewBox="0 0 24 24" width="24" height="24">
+              <path d="M6 19h4V5H6zm8 0h4V5h-4z"></path>
+          </svg>
+      </button>
+  </div>
+</div>
+
+<script>
+window.onload = function() {
+  const audio = document.getElementById("audio");
+  const playButton = document.getElementById("playButton");
+  const pauseButton = document.getElementById("pauseButton");
+
+  // Array of songs
+  const songs = [
+      "/music/type shit - future.mp3",
+      "/music/So Innocent v2 - Guardon.mp3" // Add your next song path here
+  ];
+
+  let currentSongIndex = 0; // Start with the first song
+
+  // Set initial volume to 50%
+  audio.volume = 0.5;
+
+  // Load the first song
+  audio.src = songs[currentSongIndex];
+  audio.play();
+
+  // Toggle music playback
+  playButton.addEventListener("click", () => {
+      if (audio.paused) {
+          audio.play();
+          playButton.style.display = "none"; // Hide play button
+          pauseButton.style.display = "inline"; // Show pause button
+      }
+  });
+
+  pauseButton.addEventListener("click", () => {
+      if (!audio.paused) {
+          audio.pause();
+          pauseButton.style.display = "none"; // Hide pause button
+          playButton.style.display = "inline"; // Show play button
+      }
+  });
+
+  stopButton.addEventListener("click", () => {
+      audio.pause();
+      audio.currentTime = 0; // Reset audio to start
+      pauseButton.style.display = "none"; // Hide pause button
+      playButton.style.display = "inline"; // Show play button
+  });
+
+  // Listen for the 'ended' event to play the next song
+  audio.addEventListener("ended", () => {
+      currentSongIndex++; // Move to the next song
+      if (currentSongIndex >= songs.length) {
+          currentSongIndex = 0; // Loop back to the first song
+      }
+      audio.src = songs[currentSongIndex]; // Update audio source
+      audio.play(); // Play the next song
+      playButton.style.display = "none"; // Hide play button
+      pauseButton.style.display = "inline"; // Show pause button
+  });
+};
+</script>
+
+
+</script>
 </body>
 </html>
