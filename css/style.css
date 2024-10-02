@@ -38,7 +38,7 @@ body {
   bottom: -50%;
   width: 200%;
   height: 200vh;
-  background: transparent url('http://assets.iceable.com/img/noise-transparent.png') repeat 0 0;
+  background: transparent url('/images/static.png') repeat 0 0;
   background-repeat: repeat;
   animation: bg-animation .2s infinite;
   opacity: .9;
@@ -81,7 +81,7 @@ body {
 }
 
 .subtitle {
-  margin-top: 0.175rem 
+  margin-top: 0.175rem
 }
 
 a.errorsubtitle {

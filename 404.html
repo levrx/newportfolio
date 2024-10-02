@@ -1,10 +1,9 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <title>levrx - portfolio</title>
   <link rel="stylesheet" href="/css/404.css">
-
 </head>
 <body>
 
@@ -21,6 +20,11 @@
 </div>
 
 <script>
+  // Define the goBack function
+  function goBack() {
+    window.history.back(); // Navigate back to the previous page
+  }
+
   function navigateTo(url) {
     document.getElementById('eye-closure').classList.add('open');
     setTimeout(() => {
