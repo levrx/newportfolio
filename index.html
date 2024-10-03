@@ -147,8 +147,8 @@
 
 <script>
 const timeLimit = 3600000; 
-const apiUrl = import.meta.env.APIurl; 
-const apiKey = import.meta.env.APIkey; 
+const apiUrl = import.meta.env.PUBLIC_APIurl; 
+const apiKey = import.meta.env.PUBLIC_APIkey;  
 
 function isNewVisit() {
     const lastVisitTime = localStorage.getItem('lastVisit');
