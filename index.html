@@ -1,93 +1,236 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" >
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>levrx - portfolio</title>
   <link rel="stylesheet" href="/css/style.css">
   <link rel="stylesheet" href="/css/music.css">
+
+
 </head>
 <body>
   <div class="bg"></div>
+
   <div class="content">
-    <h1 class="title">levrx
-      <div class="aurora">
-        <div class="aurora__item"></div>
-        <div class="aurora__item"></div>
-        <div class="aurora__item"></div>
-        <div class="aurora__item"></div>
-      </div>
-    </h1>
-    <p class="subtitle">a cybersecurity college student.</p>
-    
-    <div class="button-container">
-      <a onclick="navigateTo('https://github.com/levrx'); updateCounter('github')">
-        <button class="Btn">GitHub</button>
-      </a>
-      
-      <a onclick="navigateTo('https://movies.levrx.lol'); updateCounter('movies')">
-        <button class="Btn">Movies</button>
-      </a>
-      
-      <a onclick="navigateTo('https://images.levrx.lol'); updateCounter('images')">
-        <button class="Btn">Images</button>
-      </a>
-      
-      <a onclick="navigateTo('https://discord.gg/nhwSnJGR'); updateCounter('discord')">
-        <button class="Btn">Discord</button>
-      </a>
+  <h1 class="title">levrx
+    <div class="aurora">
+      <div class="aurora__item"></div>
+      <div class="aurora__item"></div>
+      <div class="aurora__item"></div>
+      <div class="aurora__item"></div>
     </div>
-  </div>
+  </h1>
+  <p class="subtitle">a cybersecurity college student.</p>
+  
+  <div class="button-container">
+    <a onclick="navigateTo('https://github.com/levrx')">
 
-  <div id="status-container">
-    <a onclick="navigateTo('/images/kermit.gif')" id="status-text">@levrx._.</a>
-    <img id="status-icon" src="" alt="Discord Status Icon">
-  </div>
+        <button class="Btn">
+          <span class="svgContainer">
+            <svg fill="white" viewBox="0 0 496 512" height="1.6em">
+              <path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path>
+            </svg>
+          </span>
+          <span class="BG"></span>
+        </button>
+      </a>
+      
+      <a onclick="navigateTo('https://movies.levrx.lol')">
+        <button class="Btn">
+          <span class="svgContainer">
+            <img src="/images/movie-vault.png" alt="Icon" style="width:100%; height:100%; object-fit:contain;">
+          </span>
+          <span class="BG"></span>
+        </button>
+      </a>
+      
+      <a onclick="navigateTo('https://images.levrx.lol')">
+        <button class="Btn">
+          <span class="svgContainer">
+            <svg fill="#ffffff" viewBox="0 0 496 512" height="1.6em" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 487 487" xml:space="preserve" stroke="#ffffff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <g> <path d="M308.1,277.95c0,35.7-28.9,64.6-64.6,64.6s-64.6-28.9-64.6-64.6s28.9-64.6,64.6-64.6S308.1,242.25,308.1,277.95z M440.3,116.05c25.8,0,46.7,20.9,46.7,46.7v122.4v103.8c0,27.5-22.3,49.8-49.8,49.8H49.8c-27.5,0-49.8-22.3-49.8-49.8v-103.9 v-122.3l0,0c0-25.8,20.9-46.7,46.7-46.7h93.4l4.4-18.6c6.7-28.8,32.4-49.2,62-49.2h74.1c29.6,0,55.3,20.4,62,49.2l4.3,18.6H440.3z M97.4,183.45c0-12.9-10.5-23.4-23.4-23.4c-13,0-23.5,10.5-23.5,23.4s10.5,23.4,23.4,23.4C86.9,206.95,97.4,196.45,97.4,183.45z M358.7,277.95c0-63.6-51.6-115.2-115.2-115.2s-115.2,51.6-115.2,115.2s51.6,115.2,115.2,115.2S358.7,341.55,358.7,277.95z"></path> </g> </g> </g></svg>
+          </span>
+          <span class="BG"></span>
+        </button>
+      </a>
+      
 
+      <a onclick="navigateTo('https://discord.gg/nhwSnJGR')">
+        <button class="Btn">
+          <span class="svgContainer">
+           <svg viewBox="0 -28.5 256 256" height="1.6em" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <path d="M216.856339,16.5966031 C200.285002,8.84328665 182.566144,3.2084988 164.041564,0 C161.766523,4.11318106 159.108624,9.64549908 157.276099,14.0464379 C137.583995,11.0849896 118.072967,11.0849896 98.7430163,14.0464379 C96.9108417,9.64549908 94.1925838,4.11318106 91.8971895,0 C73.3526068,3.2084988 55.6133949,8.86399117 39.0420583,16.6376612 C5.61752293,67.146514 -3.4433191,116.400813 1.08711069,164.955721 C23.2560196,181.510915 44.7403634,191.567697 65.8621325,198.148576 C71.0772151,190.971126 75.7283628,183.341335 79.7352139,175.300261 C72.104019,172.400575 64.7949724,168.822202 57.8887866,164.667963 C59.7209612,163.310589 61.5131304,161.891452 63.2445898,160.431257 C105.36741,180.133187 151.134928,180.133187 192.754523,160.431257 C194.506336,161.891452 196.298154,163.310589 198.110326,164.667963 C191.183787,168.842556 183.854737,172.420929 176.223542,175.320965 C180.230393,183.341335 184.861538,190.991831 190.096624,198.16893 C211.238746,191.588051 232.743023,181.531619 254.911949,164.955721 C260.227747,108.668201 245.831087,59.8662432 216.856339,16.5966031 Z M85.4738752,135.09489 C72.8290281,135.09489 62.4592217,123.290155 62.4592217,108.914901 C62.4592217,94.5396472 72.607595,82.7145587 85.4738752,82.7145587 C98.3405064,82.7145587 108.709962,94.5189427 108.488529,108.914901 C108.508531,123.290155 98.3405064,135.09489 85.4738752,135.09489 Z M170.525237,135.09489 C157.88039,135.09489 147.510584,123.290155 147.510584,108.914901 C147.510584,94.5396472 157.658606,82.7145587 170.525237,82.7145587 C183.391518,82.7145587 193.761324,94.5189427 193.539891,108.914901 C193.539891,123.290155 183.391518,135.09489 170.525237,135.09489 Z" fill="#5865F2" fill-rule="nonzero"> </path> </g> </g></svg>
+          </span>
+          <span class="BG"></span>
+        </button>
+      </a>
+  </div>
+</div>
+
+
+<div id="status-container">
+  <a onclick="navigateTo('/images/kermit.gif')" id="status-text">@levrx._.</a>
+  <img id="status-icon" src="" alt="Discord Status Icon">
+</div>
+
+  
   <div id="eye-closure" class="eye-closure"></div> 
   
   <script>
     function navigateTo(url) {
-      document.getElementById('eye-closure').classList.add('open');
-      setTimeout(() => {
-        window.location.href = url;
-      }, 1000); 
-    }
+  document.getElementById('eye-closure').classList.add('open');
+  setTimeout(() => {
+    window.location.href = url;
+  }, 1000); 
+}
   </script>
 
-  <script>
-    const apiUrl = 'https://api.jsonbin.io/v3/b/66fed5dfe41b4d34e43c7029'; 
-    const apiKey = '$2a$10$0oZ.ddWfHTT2jRxWe9PtteLVjwnajyLimUZKU33chPK1htpO6z9ge'; 
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const statusIcon = document.getElementById('status-icon');
+    const apiUrl = 'https://japi.rest/discord/v1/user/1027224507913621504'; // Discord API URL
 
-    function updateCounter(type) {
-      fetch(apiUrl, {
-          headers: {
-              'X-Master-Key': apiKey
-          }
-      })
+    statusIcon.src = '/images/discord/default.webp';
+
+    fetch(apiUrl)
       .then(response => response.json())
       .then(data => {
-          data.record[type]++;  // Increment the specific type
-          updateViewCount(data.record);
+        const status = data.presence.status; // Get the status
+        
+        const statusMap = {
+          'online': '/images/discord/online.webp',
+          'idle': '/images/discord/idle.webp',
+          'dnd': '/images/discord/dnd.webp',
+          'offline': '/images/discord/offline.webp'
+        };
+        
+        // Update the status icon with the fetched status
+        statusIcon.src = statusMap[status] || '/images/discord/default.webp'; // Default icon if status is unknown
       })
-      .catch(error => console.error('Error fetching view count:', error));
-    }
+      .catch(error => {
+        console.error('Error fetching status:', error);
+        // Ensure the icon is set to default if there's an error
+        statusIcon.src = '/images/discord/default.webp';
+      });
+  });
+  
+</script>
+    
+<script>
+  document.addEventListener('mousemove', function (e) {
+      createTrail(e.pageX, e.pageY);
+  });
 
-    function updateViewCount(updatedRecord) {
-      fetch(apiUrl, {
-          method: 'PUT',
-          headers: {
-              'Content-Type': 'application/json',
-              'X-Master-Key': apiKey
-          },
-          body: JSON.stringify(updatedRecord)
-      })
-      .then(() => {
-          console.log('View count updated successfully:', updatedRecord);
-      })
-      .catch(error => console.error('Error updating views:', error));
-    }
-  </script>
+  function createTrail(x, y) {
+      const trail = document.createElement('div');
+      trail.classList.add('trail');
+      document.body.appendChild(trail);
 
+      trail.style.left = x + 'px';
+      trail.style.top = y + 'px';
+
+      setTimeout(() => {
+          trail.remove();
+      }, 300); 
+  }
+</script>
+
+<div class="counter-container">
+  <div class="view-counter">
+    <svg xmlns="http://www.w3.org/2000/svg" class="eye-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="12" cy="12" r="3"></circle>
+      <path d="M21 12c-2.25 4-6 6-9 6s-6.75-2-9-6 6-6 9-6 6.75 2 9 6z"></path>
+    </svg>
+    <p id="viewCount">-</p>
+  </div>
+</div>
+
+<style>
+  .counter-container {
+  text-align: center;
+  font-family: Arial, sans-serif;
+  color: #5DB35A; 
+  background-color: transparent; 
+  position: fixed; 
+  top: 10px; 
+  left: 10px; 
+  padding: 10px;
+}
+
+.view-counter {
+  display: inline-flex;
+  align-items: center;
+  background-color: transparent; 
+}
+
+.eye-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+  color: #5DB35A; 
+}
+
+#viewCount {
+  font-size: 1.2em;
+  margin: 0;
+  color: #5DB35A; 
+}
+</style>
+
+<script>
+const timeLimit = 3600000; 
+const apiUrl = 'https://api.jsonbin.io/v3/b/66fed5dfe41b4d34e43c7029'; 
+const apiKey = '$2a$10$0oZ.ddWfHTT2jRxWe9PtteLVjwnajyLimUZKU33chPK1htpO6z9ge'; 
+
+function isNewVisit() {
+    const lastVisitTime = localStorage.getItem('lastVisit');
+    const currentTime = new Date().getTime();
+    if (!lastVisitTime || currentTime - lastVisitTime > timeLimit) {
+        localStorage.setItem('lastVisit', currentTime);
+        return true;
+    }
+    return false;
+}
+
+function fetchViewCount() {
+    fetch(apiUrl, {
+        headers: {
+            'X-Master-Key': apiKey
+        }
+    })
+    .then(response => response.json())
+    .then(data => {
+        let viewCount = data.record.views;
+        document.getElementById('viewCount').textContent = viewCount; 
+        if (isNewVisit()) {
+            viewCount++;
+            updateViewCount(viewCount);
+        }
+    })
+    .catch(error => {
+        console.error('Error fetching view count:', error);
+        document.getElementById('viewCount').textContent = 'Error';
+    });
+}
+
+function updateViewCount(viewCount) {
+    fetch(apiUrl, {
+        method: 'PUT',
+        headers: {
+            'Content-Type': 'application/json',
+            'X-Master-Key': apiKey
+        },
+        body: JSON.stringify({ views: viewCount })
+    })
+    .then(() => {
+        document.getElementById('viewCount').textContent = viewCount;
+    })
+    .catch(error => console.error('Error updating views:', error));
+}
+
+fetchViewCount();
+</script>
+
+
+</script>
 </body>
 </html>
