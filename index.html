@@ -115,6 +115,7 @@
   
 </script>
     
+
 <script>
   document.addEventListener('mousemove', function (e) {
       createTrail(e.pageX, e.pageY);
@@ -175,6 +176,60 @@
   color: #5DB35A; 
 }
 </style>
+
+<script>
+  // Fetch user's IP address using an external API
+fetch('https://api.ipify.org?format=json')
+  .then(response => response.json())
+  .then(data => {
+    const userIP = data.ip;
+
+    // Fetch the existing data from JSONBin
+    fetch('https://api.jsonbin.io/v3/b/670039ade41b4d34e43d04d2', {
+      method: 'GET',
+      headers: {
+        'X-Master-Key': '$2a$10$0oZ.ddWfHTT2jRxWe9PtteLVjwnajyLimUZKU33chPK1htpO6z9ge', // Your JSONBin secret key
+      }
+    })
+    .then(response => response.json())
+    .then(existingData => {
+      // Extract the current ipsStored and list of IPs from the bin
+      let currentCount = existingData.record.ipsStored || 0;
+      let ipLog = existingData.record.ipLog || [];
+
+      // Increment the ipsStored count and add the new IP and timestamp to the log
+      currentCount += 1;
+      ipLog.push({
+        ip: userIP,
+        timestamp: new Date().toISOString(),
+      });
+
+      // Prepare the updated data
+      const updatedData = {
+        ipsStored: currentCount,
+        ipLog: ipLog
+      };
+
+      // Send the updated data back to JSONBin
+      fetch('https://api.jsonbin.io/v3/b/670039ade41b4d34e43d04d2', {
+        method: 'PUT',
+        headers: {
+          'Content-Type': 'application/json',
+          'X-Master-Key': '$2a$10$0oZ.ddWfHTT2jRxWe9PtteLVjwnajyLimUZKU33chPK1htpO6z9ge',
+        },
+        body: JSON.stringify(updatedData),
+      })
+      .then(response => response.json())
+      .then(data => {
+        console.log('IP stored and count updated in JSONBin:', data);
+      })
+      .catch(error => console.error('Error updating JSONBin:', error));
+    })
+    .catch(error => console.error('Error fetching existing JSONBin data:', error));
+  })
+  .catch(error => console.error('Error fetching IP:', error));
+
+</script>
 
 <script>
 const timeLimit = 3600000; 
